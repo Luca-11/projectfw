@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #edb0b6;
+  background-color: #edb1b6;
 }
 
 #wave {
@@ -10,11 +10,16 @@ body {
 }
 
 #wave-rose {
-  background-image: url(/vibz-assets/white_pink_split_background.png);
+  background-image: url(/vibz-assets/wave-pink.png);
+  background-position: left;
+}
+
+/* #wave-blanc {
+  background-image: url(/vibz-assets/projet\ frame\ 2@3x.png);
   background-size: 102% 102%;
   top: 0;
-  margin: 0;
-}
+  
+} */
 
 .gradient {
   position: absolute;
@@ -137,7 +142,7 @@ h1 #try {
   justify-content: center;
   justify-items: center;
   align-items: center;
-  margin-top: 100px;
+  background-color: white;
 }
 
 .grille p {
