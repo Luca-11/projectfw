@@ -131,16 +131,40 @@ gsap.fromTo(
 
 // ----------- PIN wave-rose ----------------
 
-gsap.to("#wave-pink", {
-  scrollTrigger: {
-    trigger: "#pin-animation",
-    start: "top 10%",
-    end: "bottom 20%",
-    pin: true,
-    markers: false,
-    scrub: 0.5,
+gsap.fromTo(
+  ".wave-pink",
+  {
+    opacity: 1,
   },
-});
+  {
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".test",
+      start: "top 20%",
+      end: "bottom 45%",
+      pin: true,
+      markers: true,
+      scrub: 1,
+    },
+  }
+);
+
+gsap.fromTo(
+  ".wave-blue",
+  {
+    opacity: 0,
+  },
+  {
+    autoAlpha: 1,
+    scrollTrigger: {
+      trigger: ".test",
+      start: "top 20%",
+      end: "bottom 45%",
+      pin: true,
+      scrub: 1,
+    },
+  }
+);
 
 // ------------------ Animation photos + chemin -------------------
 
@@ -162,21 +186,6 @@ gsap.to("#music", {
     markers: false,
     start: "top 50%",
     end: "bottom 10%",
-    scrub: 3,
-  },
-});
-
-gsap.to(".grid", {
-  backgroundColor: "#64c3d4",
-  scrollTrigger: {
-    trigger: ".grid",
-    // afficher les marqueurs de ScrollTrigger
-    // utile pour débugger
-
-    // position des marqueurs
-    markers: false,
-    start: "top 30%",
-    end: "bottom 50%",
     scrub: 3,
   },
 });
@@ -289,3 +298,20 @@ gsap.to(".photo-9", {
     end: "bottom 100%",
   },
 });
+
+// ------------------ section couleur ------------------
+
+// gsap.to(".test", {
+//   backgroundColor: "#bfebf3",
+//   scrollTrigger: {
+//     trigger: ".test",
+//     // afficher les marqueurs de ScrollTrigger
+//     // utile pour débugger
+
+//     // position des marqueurs
+//     markers: false,
+//     start: "top 30%",
+//     end: "bottom 50%",
+//     scrub: 1,
+//   },
+// });
