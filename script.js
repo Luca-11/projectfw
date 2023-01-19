@@ -15,7 +15,7 @@ gsap.to("#anim-1", {
 });
 
 gsap.fromTo(
-  "#rose",
+  "#pink",
   {
     x: -600,
   },
@@ -23,7 +23,7 @@ gsap.fromTo(
     x: 0,
     // Ce qui change par rapport à avant
     scrollTrigger: {
-      trigger: "#rose",
+      trigger: "#pink",
       // afficher les marqueurs de ScrollTrigger
       // utile pour débugger
       // position des marqueurs
@@ -37,14 +37,14 @@ gsap.fromTo(
 );
 
 gsap.fromTo(
-  "#text-anim",
+  "#text-animation",
   {
     x: 500,
   },
   {
     x: 0,
     scrollTrigger: {
-      trigger: "#text-anim",
+      trigger: "#text-animation",
 
       markers: false,
 
@@ -64,7 +64,7 @@ gsap.fromTo(
   {
     y: 0,
     scrollTrigger: {
-      trigger: "#anim-2",
+      trigger: "#animation-2",
       start: "top 35%",
       end: "bottom 45%",
       scrub: 1,
@@ -72,17 +72,42 @@ gsap.fromTo(
   }
 );
 
-gsap.to("#wave-rose", {
-  backgroundImage: "url('vibz-assets/wave-blue.png')",
+gsap.to("#wave-pink", {
   scrollTrigger: {
-    trigger: "#anim-3",
+    trigger: "#animation-3",
     start: "top 10%",
     end: "bottom 80%",
-    // pin: true,
+    pin: true,
     markers: true,
     scrub: 0.5,
   },
 });
+
+const timelineplane = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#plane",
+    markers: false,
+    // position des marqueurs
+    start: "top 10%",
+    end: "bottom 90%",
+    // synchroniser avec le scroll
+    scrub: 6,
+  },
+});
+timelineplane.to(
+  "#plane",
+  {
+    duration: 15,
+    motionPath: {
+      path: "#motionPath path",
+      align: "#motionPath path",
+      autoRotate: true,
+      alignOrigin: [0.5, 0.5],
+    },
+    ease: "none",
+  },
+  0
+);
 
 // idée : h1 sort sur la gauche en 1er
 // ensuite le texte en-dessous puis le bouton en dernier avec un délai différent de chacun
