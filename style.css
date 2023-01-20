@@ -121,6 +121,10 @@ div h2 {
 
 /* ------------Actu----------------- */
 
+#text-animation {
+  z-index: 99;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -168,12 +172,11 @@ h6 {
   margin-left: 175px;
   align-items: center;
   justify-content: center;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .btn-classes:hover {
-  transform: scale(1.2);
-  border: 1px solid white;
+  transform: scale(1.05);
 }
 
 div h1 button:hover {
@@ -186,6 +189,8 @@ div h1 button:hover {
   font-weight: 500;
   font-size: 32px;
   margin-top: 100px;
+  z-index: 90;
+  position: relative;
 }
 
 .container .btn-classes:hover {
@@ -214,17 +219,6 @@ h6 {
   z-index: -1;
 }
 
-/* #wave-pink {
-  background-image: url(/vibz-assets/wave-pink.png);
-  background-position: left;
-}
-
-.wave-blue {
-  background-image: url(/vibz-assets/wave-blue.png);
-  background-position: left;
-  position: absolute;
-} */
-
 .wave-pink {
   background-image: url(/vibz-assets/wave-pink.png);
   position: absolute;
@@ -241,6 +235,17 @@ h6 {
   visibility: hidden;
 }
 
+.wave-blue-black img {
+  position: relative;
+  width: 100%;
+  bottom: 700px;
+}
+
+.wave-blue-black {
+  position: relative;
+  z-index: -99;
+}
+
 /* ----------------Grille----------------- */
 
 .grid {
@@ -255,9 +260,9 @@ h6 {
   justify-items: center;
   align-items: center;
 
-  z-index: 1;
+  z-index: 4;
   position: relative;
-  bottom: 1400px;
+  bottom: 1500px;
 }
 
 .grid p {

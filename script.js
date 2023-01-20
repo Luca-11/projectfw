@@ -10,10 +10,10 @@ gsap.to("#title-animation", {
     // utile pour débugger
     markers: false,
     // position des marqueurs
-    start: "top 10%",
-    end: "bottom 100%",
+    start: "top 5%",
+    end: "bottom 20%",
     // synchroniser avec le scroll
-    scrub: 4.5,
+    scrub: 1,
   },
 });
 
@@ -36,7 +36,7 @@ gsap.to("#subtext", {
 
 gsap.to("#try", {
   x: -1200,
-  delay: 3,
+  delay: 2.5,
   // Ce qui change par rapport à avant
   scrollTrigger: {
     trigger: "#animation-1",
@@ -134,16 +134,18 @@ gsap.fromTo(
 gsap.fromTo(
   ".wave-pink",
   {
+    scale: 1,
     opacity: 1,
   },
   {
+    scale: 2,
     opacity: 0,
     scrollTrigger: {
       trigger: ".test",
       start: "top 20%",
       end: "bottom 45%",
       pin: true,
-      markers: true,
+      markers: false,
       scrub: 1,
     },
   }
@@ -193,109 +195,119 @@ gsap.to("#music", {
 // ------------- Photos -----------------
 
 gsap.to(".photo-1", {
-  delay: 0.2,
+  delay: 2,
   autoAlpha: 1,
-  duration: 4,
+  duration: 2,
   scrollTrigger: {
     markers: false,
-    trigger: "#music",
-    start: "top 10%",
-    end: "bottom 100%",
+    trigger: ".photo-3",
+    start: "top 18%",
+    end: "bottom 0%",
+    scrub: 1,
   },
 });
 
 gsap.to(".photo-2", {
-  delay: 0.3,
+  delay: 4,
   autoAlpha: 1,
   duration: 4,
   scrollTrigger: {
     markers: false,
-    trigger: "#music",
-    start: "top 10%",
-    end: "bottom 100%",
+    trigger: ".photo-3",
+    start: "top 18%",
+    end: "bottom 0%",
+    scrub: 1,
   },
 });
 
 gsap.to(".photo-3", {
-  delay: 0.4,
+  delay: 6,
   autoAlpha: 1,
-  duration: 4,
+  duration: 6,
   scrollTrigger: {
     markers: false,
-    trigger: "#music",
-    start: "top 10%",
-    end: "bottom 100%",
+    trigger: ".photo-3",
+    start: "top 18%",
+    end: "bottom 0%",
+    scrub: 1,
   },
 });
 
 gsap.to(".photo-4", {
-  delay: 0.9,
+  delay: 8,
   autoAlpha: 1,
-  duration: 4,
+  duration: 8,
   scrollTrigger: {
     markers: false,
-    trigger: "#music",
-    start: "top 10%",
-    end: "bottom 100%",
+    trigger: ".photo-6",
+    start: "top 7%",
+    end: "bottom 0%",
+    scrub: 1,
   },
 });
 
 gsap.to(".photo-5", {
-  delay: 1,
+  delay: 10,
   autoAlpha: 1,
+  duration: 10,
   scrollTrigger: {
     markers: false,
-    trigger: "#music",
-    start: "top 10%",
-    end: "bottom 100%",
+    trigger: ".photo-6",
+    start: "top 7%",
+    end: "bottom 0%",
+    scrub: 1,
   },
 });
 
 gsap.to(".photo-6", {
-  delay: 1.1,
+  delay: 12,
   autoAlpha: 1,
-  duration: 4,
+  duration: 12,
   scrollTrigger: {
     markers: false,
-    trigger: "#music",
-    start: "top 10%",
-    end: "bottom 100%",
+    trigger: ".photo-6",
+    start: "top 7%",
+    end: "bottom 0%",
+    scrub: 1,
   },
 });
 
 gsap.to(".photo-7", {
-  delay: 1.6,
+  delay: 14,
   autoAlpha: 1,
-  duration: 4,
+  duration: 14,
   scrollTrigger: {
     markers: false,
-    trigger: "#music",
+    trigger: ".plus",
     start: "top 10%",
-    end: "bottom 100%",
+    end: "bottom 0%",
+    scrub: 1,
   },
 });
 
 gsap.to(".photo-8", {
-  delay: 1.7,
+  delay: 16,
   autoAlpha: 1,
-  duration: 4,
+  duration: 16,
   scrollTrigger: {
     markers: false,
-    trigger: "#music",
+    trigger: ".plus",
     start: "top 10%",
-    end: "bottom 100%",
+    end: "bottom 0%",
+    scrub: 1,
   },
 });
 
 gsap.to(".photo-9", {
-  delay: 1.8,
+  delay: 18,
   autoAlpha: 1,
-  duration: 4,
+  duration: 18,
   scrollTrigger: {
     markers: false,
-    trigger: ".grid",
+    trigger: ".plus",
     start: "top 10%",
-    end: "bottom 100%",
+    end: "bottom 0%",
+    scrub: 1,
   },
 });
 
@@ -315,3 +327,20 @@ gsap.to(".photo-9", {
 //     scrub: 1,
 //   },
 // });
+
+gsap.fromTo(
+  ".wave-blue-black",
+  {
+    y: 1000,
+  },
+  {
+    y: -1300,
+    scrollTrigger: {
+      trigger: "#title-animation",
+      start: "top 0%",
+      end: "bottom 10%",
+      markers: false,
+      scrub: 1,
+    },
+  }
+);
