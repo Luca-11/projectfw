@@ -168,6 +168,23 @@ gsap.fromTo(
   }
 );
 
+gsap.fromTo(
+  ".wave-blue-black",
+  {
+    y: 1000,
+  },
+  {
+    y: -1300,
+    scrollTrigger: {
+      trigger: "#title-animation",
+      start: "top 0%",
+      end: "bottom 10%",
+      markers: false,
+      scrub: 1,
+    },
+  }
+);
+
 // ------------------ Animation photos + chemin -------------------
 
 // ----------Chemin-------------
@@ -310,37 +327,3 @@ gsap.to(".photo-9", {
     scrub: 1,
   },
 });
-
-// ------------------ section couleur ------------------
-
-// gsap.to(".test", {
-//   backgroundColor: "#bfebf3",
-//   scrollTrigger: {
-//     trigger: ".test",
-//     // afficher les marqueurs de ScrollTrigger
-//     // utile pour débugger
-
-//     // position des marqueurs
-//     markers: false,
-//     start: "top 30%",
-//     end: "bottom 50%",
-//     scrub: 1,
-//   },
-// });
-
-gsap.fromTo(
-  ".wave-blue-black",
-  {
-    y: 1000,
-  },
-  {
-    y: -1300,
-    scrollTrigger: {
-      trigger: "#title-animation",
-      start: "top 0%",
-      end: "bottom 10%",
-      markers: false,
-      scrub: 1,
-    },
-  }
-);
